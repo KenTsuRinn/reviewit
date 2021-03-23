@@ -1,5 +1,33 @@
 <script>
 
+    import {fade} from 'svelte/transition';
+    import {elasticOut} from 'svelte/easing';
+
+
+    let dropOrNot = 'none';
+    let isRotate = false;
+
+    function toggleDropdownList(event) {
+        dropOrNot = dropOrNot === 'none' ? 'flex' : 'none';
+        isRotate = !isRotate;
+    }
+
+    function spin(node, {duration}) {
+        return {
+            duration,
+            css: t => {
+                const eased = elasticOut(t);
+
+                return `
+					transform: scale(${eased}) rotate(${eased * 1080}deg);
+					color: hsl(
+						${~~(t * 360)},
+						${Math.min(100, 1000 - 1000 * t)}%,
+						${Math.min(50, 500 - 500 * t)}%
+					);`
+            }
+        }
+    }
 </script>
 <style>
     header {
@@ -41,6 +69,7 @@
         text-align: left;
         border: none;
         background-color: transparent;
+        position: relative;
     }
 
     #app-header-menu button span {
@@ -50,6 +79,36 @@
     #app-header-menu button i.fa-arrow-left {
         float: right;
         margin: 0.2em;
+    }
+
+    #app-header-menu button i.fa-arrow-left.spin {
+        transform: rotate(-90deg);
+    }
+
+    #app-header-menu-dropdown-list {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        margin-top: 0.5em;
+        background-color: #cccccc;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        overflow-y: scroll;
+        height: 30%;
+        width: 20%;
+    }
+
+    #app-header-menu-dropdown-list > a {
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        background-color: transparent;
+    }
+
+    #app-header-menu-dropdown-list a:hover {
+        background-color: #3e8e41;
+        color: white;
     }
 
     #app-header-search {
@@ -95,6 +154,7 @@
     #v button i:nth-child(1) span {
         padding: 0.5em;
     }
+
     #v button i:nth-child(2) {
         float: right;
     }
@@ -107,11 +167,51 @@
             <i style="float: left;" class="fas fa-podcast"></i>
         </span>
         <span>
-            <p>fwef</p>
+            <p>ReviewIt</p>
         </span>
     </div>
     <div id="app-header-menu">
-        <button><i class="fas fa-home"></i><span>Home</span><i class="fas fa-arrow-left"></i></button>
+        <button on:click={toggleDropdownList} on:blur={toggleDropdownList}>
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+            {#if !isRotate}
+                <i class="fas fa-arrow-left"></i>
+            {:else}
+                <i class="fas fa-arrow-left spin" in:spin="{{duration: 8000}}" out:fade></i>
+            {/if}
+        </button>
+        <div id="app-header-menu-dropdown-list" style="display: {dropOrNot}">
+            <a>
+                <i class="fas fa-home">
+                </i>
+                <span>Home</span>
+            </a>
+            <a>
+                <i class="fas fa-home">
+                </i>
+                <span>Home</span>
+            </a>
+            <a>
+                <i class="fas fa-home">
+                </i>
+                <span>Home</span>
+            </a>
+            <a>
+                <i class="fas fa-home">
+                </i>
+                <span>Home</span>
+            </a>
+            <a>
+                <i class="fas fa-home">
+                </i>
+                <span>Home</span>
+            </a>
+            <a>
+                <i class="fas fa-home">
+                </i>
+                <span>Home</span>
+            </a>
+        </div>
     </div>
     <div id="app-header-search">
         <span>
