@@ -1197,9 +1197,31 @@ var app = (function () {
     function create_fragment(ctx) {
     	let appheader;
     	let t0;
-    	let main0;
+    	let div3;
+    	let div1;
+    	let section0;
+    	let i0;
+    	let t1;
+    	let input0;
     	let t2;
-    	let main1;
+    	let i1;
+    	let t3;
+    	let i2;
+    	let t4;
+    	let section1;
+    	let i3;
+    	let t5;
+    	let input1;
+    	let t6;
+    	let i4;
+    	let t7;
+    	let i5;
+    	let t8;
+    	let section2;
+    	let div0;
+    	let i6;
+    	let t9;
+    	let div2;
     	let current;
     	appheader = new AppHeader({ $$inline: true });
 
@@ -1207,15 +1229,62 @@ var app = (function () {
     		c: function create() {
     			create_component(appheader.$$.fragment);
     			t0 = space();
-    			main0 = element("main");
-    			main0.textContent = "fjeiwofjeiwofjeiwofjeiwofjeiwofjeiwofjeiwofjeiwofjeiwofjeiwofjeiwofjeiwofjeiwofjeiwofjeiwofjeiwofjeiwofjeiwofjeiwofjeiwofjeiwo";
+    			div3 = element("div");
+    			div1 = element("div");
+    			section0 = element("section");
+    			i0 = element("i");
+    			t1 = space();
+    			input0 = element("input");
     			t2 = space();
-    			main1 = element("main");
-    			main1.textContent = "fjeiwofjeiwofjeiwofjeiwofjeiwofjeiwofjeiwofjeiwofjeiwofjeiwofjeiwofjeiwofjeiwofjeiwofjeiwofjeiwofjeiwofjeiwofjeiwofjeiwofjeiwo";
-    			attr_dev(main0, "class", "svelte-bjgltm");
-    			add_location(main0, file, 12, 0, 161);
-    			attr_dev(main1, "class", "svelte-bjgltm");
-    			add_location(main1, file, 13, 0, 302);
+    			i1 = element("i");
+    			t3 = space();
+    			i2 = element("i");
+    			t4 = space();
+    			section1 = element("section");
+    			i3 = element("i");
+    			t5 = space();
+    			input1 = element("input");
+    			t6 = space();
+    			i4 = element("i");
+    			t7 = space();
+    			i5 = element("i");
+    			t8 = space();
+    			section2 = element("section");
+    			div0 = element("div");
+    			i6 = element("i");
+    			t9 = space();
+    			div2 = element("div");
+    			attr_dev(i0, "class", "fas fa-user svelte-4dndzl");
+    			add_location(i0, file, 55, 12, 983);
+    			attr_dev(input0, "class", "svelte-4dndzl");
+    			add_location(input0, file, 57, 12, 1038);
+    			attr_dev(i1, "class", "fas fa-search svelte-4dndzl");
+    			add_location(i1, file, 58, 12, 1059);
+    			attr_dev(i2, "class", "fas fa-search svelte-4dndzl");
+    			add_location(i2, file, 60, 12, 1116);
+    			attr_dev(section0, "class", "post-create-entry svelte-4dndzl");
+    			add_location(section0, file, 54, 8, 934);
+    			attr_dev(i3, "class", "fas fa-user svelte-4dndzl");
+    			add_location(i3, file, 65, 12, 1240);
+    			attr_dev(input1, "class", "svelte-4dndzl");
+    			add_location(input1, file, 67, 12, 1295);
+    			attr_dev(i4, "class", "fas fa-search svelte-4dndzl");
+    			add_location(i4, file, 68, 12, 1316);
+    			attr_dev(i5, "class", "fas fa-search svelte-4dndzl");
+    			add_location(i5, file, 70, 12, 1373);
+    			attr_dev(section1, "class", "post-create-entry svelte-4dndzl");
+    			add_location(section1, file, 64, 8, 1191);
+    			attr_dev(i6, "class", "fas fa-user");
+    			add_location(i6, file, 76, 15, 1505);
+    			attr_dev(div0, "class", "post svelte-4dndzl");
+    			add_location(div0, file, 75, 11, 1470);
+    			add_location(section2, file, 74, 8, 1448);
+    			attr_dev(div1, "class", "posts svelte-4dndzl");
+    			add_location(div1, file, 53, 4, 905);
+    			attr_dev(div2, "class", "navbar svelte-4dndzl");
+    			add_location(div2, file, 81, 4, 1606);
+    			attr_dev(div3, "class", "main svelte-4dndzl");
+    			add_location(div3, file, 52, 0, 881);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -1223,9 +1292,31 @@ var app = (function () {
     		m: function mount(target, anchor) {
     			mount_component(appheader, target, anchor);
     			insert_dev(target, t0, anchor);
-    			insert_dev(target, main0, anchor);
-    			insert_dev(target, t2, anchor);
-    			insert_dev(target, main1, anchor);
+    			insert_dev(target, div3, anchor);
+    			append_dev(div3, div1);
+    			append_dev(div1, section0);
+    			append_dev(section0, i0);
+    			append_dev(section0, t1);
+    			append_dev(section0, input0);
+    			append_dev(section0, t2);
+    			append_dev(section0, i1);
+    			append_dev(section0, t3);
+    			append_dev(section0, i2);
+    			append_dev(div1, t4);
+    			append_dev(div1, section1);
+    			append_dev(section1, i3);
+    			append_dev(section1, t5);
+    			append_dev(section1, input1);
+    			append_dev(section1, t6);
+    			append_dev(section1, i4);
+    			append_dev(section1, t7);
+    			append_dev(section1, i5);
+    			append_dev(div1, t8);
+    			append_dev(div1, section2);
+    			append_dev(section2, div0);
+    			append_dev(div0, i6);
+    			append_dev(div3, t9);
+    			append_dev(div3, div2);
     			current = true;
     		},
     		p: noop,
@@ -1241,9 +1332,7 @@ var app = (function () {
     		d: function destroy(detaching) {
     			destroy_component(appheader, detaching);
     			if (detaching) detach_dev(t0);
-    			if (detaching) detach_dev(main0);
-    			if (detaching) detach_dev(t2);
-    			if (detaching) detach_dev(main1);
+    			if (detaching) detach_dev(div3);
     		}
     	};
 
